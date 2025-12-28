@@ -8,3 +8,9 @@
 body {
     background: #080808;
 }
+
+#header{
+    width: 100%;
+    /* full viewport height */
+    height: 100vh; 
+}
