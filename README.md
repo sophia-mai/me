@@ -96,6 +96,29 @@ HTML:
             - ex. two classes: ```<div class="box red-box"></div>```
 
     HTML Entities:
+        - an HTML entity is a set of characters used to represent a reserved character in HTML
+        - Problem: trying to display text and have an ```<img/>``` inbetween some text --> doesn't show desired result bc the ```<``` and ```>``` indicate the beginning and the end of and HTML element
+        - Fix: Use entities
+        - Ex. ```&lt;p&gt;learning is fun&lt;/p&gt;``` will display &lt;p&gt;learning is fun&lt;/p&gt; with less than and greater than sign
+            - Called named character references
+        - Named character references:
+            - start with an ampersand sign and end with a semicolon
+            - by using these, HTML parser doesn't confuse an actual HTML element
+            - ex. &lt;
+        - Decimal numeric reference:
+            - starts with an ampersand (&) and a hash symbol (#) followed by one or more deciml digits followed by a semicolon
+                - ex. ```&#169;``` for the copyright symbol and ```&#174;``` for the trademark symbol
+        - Hexadecimal numberic reference:
+            - starts with an ampersand, hash, and the letter x, then followed by one or more ASCII hex digits and ends with a semicolon
+                - ex. ```&#x20AC;``` for the euro symbol and ```&#x03A9;``` for the Greek capital letter Omega symbol
+
+    Role of the Script Element in HTML:
+        - script elements: used to embed executable code
+            - most will use for executing JavaScript code to add interactivity to web pages
+            - best practice to link JavaScript code to an external JavaScript file instead
+                - ex of link to external JavaScript file: ```<script src="path-to-javascript-file.js"></script>```
+                    - src attribute used to specify location for external JavaScript file
+
 
 CSS:
 
