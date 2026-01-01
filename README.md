@@ -119,6 +119,36 @@ HTML:
                 - ex of link to external JavaScript file: ```<script src="path-to-javascript-file.js"></script>```
                     - src attribute used to specify location for external JavaScript file
 
+    Role of Meta Descriptions, SEO:
+        - Search engine Optimization: practice that optimizes web pages so they become more visible and rank higher on search engines
+        - One way to improve SEO is providing a short description for web page using meta element
+        ex. ```<meta
+                name="description"
+                content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
+                />```
+                    - by setting name attribute to description, ensures browsers and search engines know about this type of metadata
+                    - the content attribute is where you place the description
+                    - recommended that you keep your descriptions short and concise
+                    - meta description will not be visible on web page
+                        - can befound in its search engine result page snippet
+
+    Role of Open Graph Tags, SEO:
+        - open graph protocol enables control on website's content that appears across various social media platforms, ex. LinkedIn
+            - by setting these open graph properties, you can entice users to want to click and engage with content
+        - set using meta elements inside HTML head section
+        - First important OG property to include would be title
+            - ex. ```<meta content="freeCodeCamp.org" property="og:title" />```
+        - Next important OG property is type
+            - ex. ```<meta property="og:type" content="website" />```
+                - the type property is used to represent the type of content being shared ex. articles, websites, video, music
+        - Third important OG property is image
+            - ex. ```<meta
+                content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+                property="og:image"
+                />```
+        - Fourth important OG property is url
+            - ex. ```<meta property="og:url" content="https://www.freecodecamp.org" />```
+
 
 CSS:
 
