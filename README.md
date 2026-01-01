@@ -1,43 +1,161 @@
 # Portfolio Page
-Following tutorial: https://www.youtube.com/watch?v=0YFrGy_mzjY (JS)
-Following tutorial: https://www.youtube.com/watch?v=d56mG7DezGs (TS)
+
+Following tutorials:
+
+- https://www.youtube.com/watch?v=0YFrGy_mzjY (JS)
+- https://www.youtube.com/watch?v=d56mG7DezGs (TS)
+- freeCodeCamp's HTML, CSS and JavaScript Course
+- LinkedIn Learning
+
+Tip: Should learn JavaScript first
+
+HTML:
+
+- Hypertext Markup Language, is a markup language for creating web pages.
+- headings, paragraph elements
+- usually has opening tag and a closing tag
+- For content and structure
+
+  Attributes: - value placed inside of opening tag of HTML element
+  Basic syntax: - `<element attribute="value"></element>` - the attribute name is followed by an equal sign(=) and a value in quotes.
+  Example: Links (anchor element) - `<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Visit Video</a>` - without href attribute, link would not work - target="\_blank" opens in new browser tab
+  Example: Images - `<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="two cats" />"`
+  Example: Checkboxes - `<input type="checkbox" checked />` - checked attribute shows that checkbox is checked. if not there will be unchecked
+  Example: input - `<input type="text" disabled>` - disabled doesn't allow for text inputs, not present allows
+  Figure: `<figure>...<figcaption></figcaption></figure>`
+  Emphasis: italisizes what you wrap around `<em></em>`
+  Strong: bolds text `<strong>...</strong>`
+  Footer: end of a document typically with copyright info, links to terms, contact info, etc. `<footer></footer>`
+
+  Link Element: - used to link external resources like stylesheets and site icons - `<link rel="stylesheet" href="./styles.css">` - rel attribute used to specify the relationship b/w linked resource and HTML document - href att used to specify location of URL - ./ looks in current directory - best practice to seperate HTML and CSS in diff files - devs use link element for external CSS file instead of writing in HTML document - link element should be placed inside the head element - ex.
+
+            ```<head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Examples of the link element</title>
+                <link rel="stylesheet" href="./styles.css" />
+            </head>```
+
+        - Example Icons:
+            - ```<link rel="icon" href="favicon.ico" />```
+                - favicon is small icon used to display in browser tab next to site title
+
+  HTML Boilerplate: - template/foundation for webpages
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+       name="viewport"
+       content="width=device-width, initial-scale=1.0" />
+    <title>freeCodeCamp</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>I am a main title</h1>
+    <p>Example paragraph text</p>
+  </body>
+</html>
+```
+
+        - DOCTYPE tells browser which version of HTML
+        - html tag wrap around all content
+            - tag lang specifies the language of page
+                - ```<html lang="en">```
+            - inside html tag, two main sections
+                - head
+                    - important metadata goes inside
+                        - meta elements has details about character encoding, site's title
+                        - external stylesheets
+                - body
+                    - where all content goes
+
+    What is UTF-8 Character Encoding?
+        - USC Transformation Format 8 is standardized character encoding used on the web
+        - encoding: method to store characters as data, bytes
+        ```<meta charset ="UTF-8" />```
+        - For each new project, should include this meta element with charset to UTF-8
+
+    Div Elements:
+        - div is used as a container to group other elements
+        - Mainly use div element to group HTML that will share a set of CSS styles
+        - don't use divs too much, sometimes section might be better
+        - Sections have semantic meaning and websites will treat as a section
+        - divs have no semantic meaning
+
+    IDs and Classes:
+        - id attribute: adds unique identifier to an HTML element
+            - in CSS, the id can be used to reference the HTML element to change how it looks
+            - id values can't have spaces in them and should always be unique
+            - ex. ```<h1 id="title">Movie Review Page</h1>```
+        - class attribute: does not need to be unique and can have spaces
+            - You can have multiple classes in an element by separating the names by a space
+            - ex. one class: ```<div class="box"></div>```
+            - ex. two classes: ```<div class="box red-box"></div>```
+
+    HTML Entities:
+
+CSS:
+
+- For styling
+
+JavaScript:
+
+- helps merge HTML and CSS together
+- for interactivity to websites
+- what a lot of modern websites use
+- has different flavors like TypeScript, CoffeeScript
+
+Steps (JS):
+
+- create index.html
+  - type ! and click enter for html template
 
 Tips (JS):
-- Use Live Server on VSCode
-    - Go to index.html
-    - right click the text and click Open with Liver Server
 
+- Use Live Server on VSCode
+  - Go to index.html
+  - right click the text and click Open with Liver Server
+    - Updates website live
+- Extensions:
+  - ESLint
+  - Prettier
+- In a website on a browser
+  - Inspect > Console > Type window.document
+  - You can open the dropdowns to see the HTML
 
 What is TypeScript:
+
 - Built on top of JavaScript
 - Is a statically typed language (JS is not)
 
-Steps (TS):
-    - Install Node.js
-    - run in terminal: npm i -g typescript
-        - this installs TS in all folders
-    - create a index.ts file
+Steps (TS): - Install Node.js - run in terminal: npm i -g typescript - this installs TS in all folders - create a index.ts file
 
     Configuring TypeScript Compiler:
-        - tsc --init 
+        - tsc --init
             - creates tsconfig.json
         - create src and dist folders
         - in tsconfig.json
             - uncomment rootDir to go to ./src
             - uncomment outDir to go to ./dist
- 
+
 Tips for TS:
+
 - running: tsc in terminal compiles all .ts files
 - Debugging:
-    - in tsconfig.json, have sourceMap to true
-    - insert break points in code to start debugging
-    - go to debug panel (in VSCode)
-    - Click create a launch.json file
-        - Select Node.js
-    - in launch.json under "program"
-        - add "preLaunchTask": "tsc: build - tsconfig.json",
-            - tells compiler to use tsconfig.json
-    - Now can debug!
-        - go to debug panel, at top click "Launch Program"
-        - In watch tab, you can add a variable to watch
-        - step 
+  - in tsconfig.json, have sourceMap to true
+  - insert break points in code to start debugging
+  - go to debug panel (in VSCode)
+  - Click create a launch.json file
+    - Select Node.js
+  - in launch.json under "program"
+    - add "preLaunchTask": "tsc: build - tsconfig.json",
+      - tells compiler to use tsconfig.json
+  - Now can debug!
+    - go to debug panel, at top click "Launch Program"
+    - In watch tab, you can add a variable to watch
+    - step over goes to next line
+    - step into goes into a function
+    - step out goes out of a function
