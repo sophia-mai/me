@@ -149,6 +149,32 @@ HTML:
         - Fourth important OG property is url
             - ex. ```<meta property="og:url" content="https://www.freecodecamp.org" />```
 
+    Role of HTML Audio and Video Elements:
+        - audio and video elements allow you to add sound and video content to HTML docs
+        - audio supports popular audio formats like mp3
+        - video support ex mp4
+        - to include audio content on web page can use audio element with src attribute
+            - ex. ```<audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"></audio>```
+                - to add controls, add controls attribute
+                    - ex. ```<audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" controls></audio>```
+        - controls is boolean attribute
+        - other attributes as well:
+            - loop (boolean makes audio replay)
+            - muted (boolean when audio element is present, automatically start muted)
+        - with audio, dufferences in types that are allowed in browsers
+            - solution: use source elements insude audio element and browser selects the first source it understands
+                - ex. ```<audio controls>
+                    <source src="audio.ogg" type="audio/ogg" />
+                    <source src="audio.wav" type="audio/wav" />
+                    <source src="audio.mp3" type="audio/mpeg" />
+                    </audio>```
+            - (all attributes also work with video)
+        - video:
+            - add autoplay att to opening video tag so video plays automatically
+            - add poster att if you want to display an image while video is downloading
+
+
+
 
 CSS:
 
